@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página Musical</title>
     <style>
-        /* Configurações do corpo da página */
         body {
-            background-image: url('vanessa/a gente.jpg');
+            background-image: url('https://raw.githubusercontent.com/danielxdsad/site-2.0/main/a%20gente.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -22,7 +21,6 @@
             overflow-x: hidden;
         }
 
-        /* Estilo do título principal */
         h1 {
             font-size: 48px;
             color: #f8d7ff;
@@ -32,7 +30,6 @@
             letter-spacing: 2px;
         }
 
-        /* Estilo para parágrafos */
         p {
             font-size: 22px;
             color: #f3e6f7;
@@ -42,7 +39,6 @@
             text-align: justify;
         }
 
-        /* Estilo do bloco de texto romântico */
         .romantic-text {
             font-size: 24px;
             font-weight: 600;
@@ -78,7 +74,6 @@
             }
         }
 
-        /* Botão para iniciar música */
         #playButton {
             padding: 10px 30px;
             font-size: 22px;
@@ -102,7 +97,6 @@
             cursor: not-allowed;
         }
 
-        /* Galeria de Polaroids */
         .polaroid-gallery {
             display: flex;
             justify-content: center;
@@ -133,7 +127,6 @@
             border-radius: 10px;
         }
 
-        /* Descrição da foto */
         .description {
             position: absolute;
             bottom: 10px;
@@ -147,7 +140,6 @@
             font-weight: 500;
         }
 
-        /* LEDs piscando em volta das Polaroids */
         .leds {
             position: absolute;
             top: 10px;
@@ -201,7 +193,6 @@
             }
         }
 
-        /* Área para o botão */
         .button-container {
             position: fixed;
             bottom: 20px;
@@ -212,14 +203,12 @@
 </head>
 <body>
 
-    <!-- Cabeçalho fixo -->
     <div id="header" style="margin-top: 50px;">
         <h1>Oi Menina!!</h1>
         <p>Olha o que fiz pra você :)</p>
         <p>Não é muita coisa, mas é algo diferente do normal que estou acostumado a te entregar</p>
     </div>
 
-    <!-- Texto romântico -->
     <div class="romantic-text">
         <div class="heart-icon">💖</div>
         <p>
@@ -227,77 +216,40 @@
         </p>
     </div>
 
-    <!-- Galeria de Polaroids -->
     <div class="polaroid-gallery">
         <div class="polaroid">
-            <img src="vanessa/1.jpg" alt="Foto 1">
+            <img src="https://raw.githubusercontent.com/danielxdsad/site-2.0/main/1.jpeg" alt="Foto 1">
             <div class="description">Descrição da Foto 1</div>
-            <div class="leds">
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-            </div>
         </div>
         <div class="polaroid">
-            <img src="vanessa/2.jpg" alt="Foto 2">
+            <img src="https://raw.githubusercontent.com/danielxdsad/site-2.0/main/2.jpeg" alt="Foto 2">
             <div class="description">Descrição da Foto 2</div>
-            <div class="leds">
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-            </div>
         </div>
         <div class="polaroid">
-            <img src="vanessa/3.jpg" alt="Foto 3">
+            <img src="https://raw.githubusercontent.com/danielxdsad/site-2.0/main/3.jpeg" alt="Foto 3">
             <div class="description">Descrição da Foto 3</div>
-            <div class="leds">
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-            </div>
         </div>
         <div class="polaroid">
-            <img src="vanessa/4.jpg" alt="Foto 4">
+            <img src="https://raw.githubusercontent.com/danielxdsad/site-2.0/main/4.jpeg" alt="Foto 4">
             <div class="description">Descrição da Foto 4</div>
-            <div class="leds">
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-            </div>
         </div>
         <div class="polaroid">
-            <img src="vanessa/5.jpg" alt="Foto 5">
+            <img src="https://raw.githubusercontent.com/danielxdsad/site-2.0/main/5.jpeg" alt="Foto 5">
             <div class="description">Descrição da Foto 5</div>
-            <div class="leds">
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-                <div class="led"></div>
-            </div>
         </div>
     </div>
 
-    <!-- Botão para iniciar o vídeo -->
+    <!-- Botão de Play para música -->
     <div class="button-container">
-        <button id="playButton">Aperte aqui para começar</button>
+        <button id="playButton">Play Música</button>
+        <iframe id="videoIframe" width="560" height="315" style="display:none;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <script>
         document.getElementById("playButton").addEventListener("click", function() {
             var iframe = document.getElementById("videoIframe");
-            iframe.style.display = "block"; // Exibe o iframe de vídeo
-            iframe.src = "https://www.youtube.com/embed/QVgeO-RMjrI?autoplay=1&loop=1&playlist=QVgeO-RMjrI"; // Inicia o vídeo automaticamente
-
-            // Desabilita o botão após o clique
+            iframe.style.display = "block";
+            iframe.src = "https://www.youtube.com/embed/QVgeO-RMjrI?autoplay=1&loop=1&playlist=QVgeO-RMjrI";
             document.getElementById("playButton").disabled = true;
         });
     </script>
